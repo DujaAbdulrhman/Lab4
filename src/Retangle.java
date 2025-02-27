@@ -1,43 +1,36 @@
-public class Retangle extends Shape{
+public class Rectangle extends Shape{
     private double height;
     private double width;
-    public Retangle(int x, int y) {
-        super(x, y);
-    }
 
-    public Retangle() {
+    public Rectangle() {
 
     }
 
-
-    @Override
-    public double calculateArea(double radius) {
-        return 0;
-    }
-
-    //مدري بالضبط وش المشكله بس كررتها عشان ما تطلعلي ايرور فوق
-    @Override
-    public double calculateArea(double height,double width) {
-        double area=height*width;
-        return area;
-    }
-
-    @Override
-    public double calculateCircumference(double radius) {
-        return 0;
-    }
-
-    @Override
-    public double calculateCircumference(double height,double width) {
-        double Circumference=height*2+width*2;
-        return Circumference;
-    }
-
-    public Retangle(int x, int y, double height, double width) {
-        super(x, y);
+    public Rectangle( double height, double width) {
         this.height = height;
         this.width = width;
     }
+
+
+
+    public double getHeight() {
+        return height;
+    }
+
+    public double getWidth() {
+        return width;
+    }
+
+    @Override
+    public void calculateCircumference() {
+        System.out.println(height*width);
+    }
+
+    @Override
+    public void calculateArea() {
+        System.out.println(2*(height+width));
+    }
+
 
     public double getHeight(int i) {
         return height;
