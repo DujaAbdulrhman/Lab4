@@ -2,35 +2,26 @@ public class Triangle extends Shape{
 
     private double height;
     private double base;
-    public Triangle(int x, int y) {
-        super(x, y);
-    }
 
     public Triangle() {
 
     }
 
-    @Override
-    public double calculateArea(double radius) {
-        return 0;
+    public Triangle(double height, double base) {
+        this.height = height;
+        this.base = base;
     }
 
     @Override
-    public double calculateArea(double height, double base) {
-        double area=height*base;
-        return 0;
+    public void calculateCircumference() {
+        System.out.println(height*base);
     }
 
     @Override
-    public double calculateCircumference(double radius) {
-        return radius;
-    }
+    public void calculateArea() {
+        System.out.println(2*(base*height));    }
 
-    @Override
-    public double calculateCircumference(double height, double base) {
-        double circumference=2*(base*height);
-        return circumference;
-    }
+    
 
     public double getHeight(double height) {
         return height;
