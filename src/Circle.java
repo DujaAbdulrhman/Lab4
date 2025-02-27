@@ -3,16 +3,25 @@ public class Circle extends Shape {
     double radius;
     private double storingRad;
 
-    public Circle(double radius) {
-        super(radius);
-    }
 
-    public Circle(int x, int y) {
-        super(x, y);
-    }
+
 
     public Circle() {
-        super();
+
+    }
+
+    public Circle(double radius) {
+        this.radius = radius;
+    }
+
+    @Override
+    public void calculateCircumference() {
+        System.out.println(radius*3.14*2);
+    }
+
+    @Override
+    public void calculateArea() {
+        System.out.println((radius*radius)*3.14);
     }
 
     public double getRadius(double radius) {
@@ -21,27 +30,5 @@ public class Circle extends Shape {
     public void setRadius(double radius) {
         this.radius = radius;
     }
-
-    @Override
-    public double calculateArea(double radius) {
-        double area=(radius*radius)*3.14;
-        return area;
-    }
-
-    @Override
-    public double calculateArea(double height, double width) {
-        return 0;
-    }
-
-    @Override
-    public double calculateCircumference(double radius) {
-        double circumference;
-        circumference = 3.14*radius*2;
-        return circumference;
-    }
-
-    @Override
-    public double calculateCircumference(double height, double width) {
-        return 0;
-    }
+    
 }
